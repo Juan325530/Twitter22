@@ -1,0 +1,42 @@
+/*CSS DE PRIMERA PAGINA*/
+
+h2 {
+    font-size: xx-large;
+    color: white
+      
+
+}
+h1{
+    color:white
+} 
+#logoFormRegistro {
+    position: absolute;
+    right: 3em;
+    top: 0.3em;
+}
+
+
+/* .btn{
+    background-color:#1A91DA ;
+    font-weight: bold; 
+    margin-top: 10px; 
+   
+}   
+*/
+
+/* #exampleModal {
+    top: auto;
+    margin-top: auto;
+}*/
+
+/* #registrate {
+    margin-left: 55px;
+    border-radius: 30px;
+    padding: 7px;
+}
+
+#iniciar{  
+    margin-left: 55px;
+    border-radius: 30px;
+    padding: 7px;    
+} */

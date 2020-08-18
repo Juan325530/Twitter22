@@ -1,0 +1,27 @@
+
+#input {
+    width: 17em; /* para hacerlo mas largo el boton */
+    font-weight: bold; /*letra como sombreada*/
+    background-color: #253341;
+    padding: 10px;
+    box-sizing: border-box;   
+    font-size: 1rem; 
+    border-radius: 30px; /*el principal  para hacerlo redondito*/
+}
+
+.contenido-principal{
+    float: left;
+    width: 500px;
+    margin-left: 300px;
+    padding: 10px;
+    margin-top: 110px;
+}
+
+#barraLateralDerecha {
+    list-style: none;
+}
+
+.tendencias{
+    border-radius: 15px;
+    background-color: #192734!important;
+}

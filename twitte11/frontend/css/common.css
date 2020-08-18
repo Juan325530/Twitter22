@@ -1,0 +1,77 @@
+/**** COMMON STYLES FOR ALL THE WEB PAGES ****/
+/****  Please check before repeat styles  ****/
+
+body{ /* Establecer la misma fuente a toda la pagina */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    background-color: #15202B !important;
+    color: white;
+}
+
+.control {
+    width: 100%;
+    padding: 15px;
+    color:#1A91DA;
+    background-color: #192734;
+    border-radius: 3px;
+    border-width: 0;
+}
+
+/* Impedir que en textarea el signo de alerta quede oculto con la barra de desplazamiento */
+.was-validated textarea.form-control:invalid, textarea.form-control.is-invalid {
+    background-position: top calc(.375em + .2875rem) right calc(.375em + 1.1875rem) !important;
+}
+/* Dar tamaño fijo al textarea e impedir que reajusten su tamañp*/
+textarea {
+    resize: none;
+    height: 8em !important;
+    overflow-y: auto;
+}
+
+.link-help {
+    color: #1DA1F2;
+    text-decoration: none;
+}
+
+.link-help:hover {
+    text-decoration: underline;
+}
+
+#logoFormRegistro {
+    position: absolute;
+    right: 0;
+    margin-right: 3em;
+    top: 0;
+    margin-top: 0.5em;
+}
+
+.blue-tw-btn { /* Botones azules */
+    background-color: #1A91DA;
+    border-radius: 30px;
+    font-weight: bold;
+    padding: 7px;
+    border: solid 2px #1A91DA;
+}
+
+.blue-tw-btn:hover,
+.blue-tw-btn:active { /* Botones azules, estados hover y activo*/
+    border-color: #0069d9;
+}
+
+.margin-zero { /* Todos los margenes iguales a cero */
+    margin: 0 !important;
+}
+
+.bg-tweet {
+    background-color: #192734 !important;
+}
+
+.link-style {  /*  Dar la apariencia de un enlace <a>*/
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    color: white;
+}
+
+.link-style:hover {
+    text-decoration: underline;
+}
