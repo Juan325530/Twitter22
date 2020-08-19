@@ -97,3 +97,47 @@ function iniciarSesion(){
         document.getElementById("iniciar").disabled = false;
     }
 }
+
+function editarPerfil () {
+    let validacionContrasenas = confirmarContrasenas("contrasena1", "contrasena2"); //validacion 
+    let validacionNombre = validarCampoVacio("nombre"); 
+    let validacionApellido = validarCampoVacio("apellido");
+    document.getElementById("EditProfile").disabled = true;
+    if ( validacionContrasenas && validacionNombre && validacionApellido) {
+     let nuevosDatos = {
+         nombre: document.getElementById ("nombre").value,
+         apellido: document.getElementById ("apellido").value,
+         contrasena: document.getElementById ("contrasena1").value,
+     };
+     axios({
+        method: 'PUT',
+        url:urlUsuarios,
+        data: nuevosDatos,
+        responseType:'json'
+    }).then(res=>{
+        console.log(res);
+        if(res.data ==1) {
+            document.getElementById("profile-nombre").innerHTML=document.getElementById ("nombre").value;
+            document.getElementById("profile-apellido").innerHTML=document.getElementById ("apellido").value;
+            //correcto 
+                document.getElementById("EditProfile").disabled = false;
+                $("#FormEditPerfil").modal('hide');
+            document.getElementById("nombre").value = '';
+            document.getElementById("nombre").classList.remove("is-valid");
+            document.getElementById("apellido").value = '';
+            document.getElementById("apellido").classList.remove("is-valid");
+            document.getElementById("contrasena1").value = '';
+            document.getElementById("contrasena1").classList.remove("is-valid");
+            document.getElementById("contrasena2").value = '';
+            document.getElementById("contrasena2").classList.remove("is-valid");
+        }
+    }).catch(error=>{
+        console.error(error);
+        document.getElementById("EditProfile").disabled = false;
+    });
+ } else {
+     document.getElementById("EditProfile").disabled = false; 
+     
+     
+ }
+}

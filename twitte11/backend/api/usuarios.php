@@ -42,6 +42,10 @@ switch ($_SERVER['REQUEST_METHOD']) {
         }
         break;
     case 'PUT': 
+        $_PUT = json_decode(file_get_contents('php://input'), true);
+        //Usuario::editarUsuario($_SESSION["twitter_codigousuario"],$_PUT["nombre"],$_PUT["apellido"],$_PUT["contrasena"]);
+        Usuario::editarUsuario(1,$_PUT["nombre"],$_PUT["apellido"],$_PUT["contrasena"]);
+        
     
         break;
     case 'DELETE':

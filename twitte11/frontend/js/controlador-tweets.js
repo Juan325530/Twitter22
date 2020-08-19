@@ -26,6 +26,10 @@ function generarTwits(){
                             <i class="fas fa-share mr-2" aria-hidden="true"></i>
                             <span>${twit[i].cantidadReTwits} Retweets</span>
                         </button>
+                        <button class="link-style" type="button" onclick="modaleditartweet('${twit[i].codigoTwit}');">
+                        <i class="fas fa-edit mr-2" aria-hidden="true"></i>
+                        <span>Editar Tweet</span>
+                    </button>
                     </div>
                 </div>`;
             } else { // Si la publicacion fue retwiteada (alguien mas lo escribio), entonces compartir ese tweet
@@ -44,6 +48,10 @@ function generarTwits(){
                                     <i class="fas fa-share mr-2" aria-hidden="true"></i>
                                     <span>${comparar[j].cantidadReTwits} Retweets</span>  
                                 </button>
+                                <button class="link-style" type="button" onclick="modaleditartweet('${twit[i].codigoTwit}');">
+                        <i class="fas fa-edit mr-2" aria-hidden="true"></i>
+                        <span>Editar Tweet</span>
+                    </button>
                             </div>
                         </div>`;
                     }
@@ -129,4 +137,10 @@ function compartirTweet(texto, idTwit) {
     }).catch(error=>{
         console.error(error);
     });
+}
+
+ function modaleditartweet(idtweetEditar) {
+     $("#edit").html(`<button id="postTwit" type="button" onclick="AcualizarTwit(${idtweetEditar})" class="btn btn-primary btn-lg col-sm-10 blue-tw-btn">Actualizar Tweet</button>`)
+     $("#EditTweet").modal("show");
+
 }

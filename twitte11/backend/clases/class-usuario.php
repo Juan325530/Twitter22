@@ -183,4 +183,23 @@ class Usuario
     }
     echo $respuesta; // ◘◘◘ Retornar codigoUsuario y tipoUsuario
   }
+
+
+public static function editarUsuario($codigoUsuario,$nombre,$apellido,$contrasena)
+{
+$contenidoArchivo = file_get_contents("../data/usuarios.json");
+$usuarios = json_decode($contenidoArchivo, true);  
+for ($i=0; $i < count(json_decode($contenidoArchivo)); $i++) { //decodificanco el archivo
+  if($usuarios[$i]["codigoUsuario"]== $codigoUsuario) { //comparando usuarios si tiene el mismo codigo que queremos editar
+    $usuarios[$i] ["nombre"] =$nombre; 
+    $usuarios[$i] ["apellido"] =$apellido;
+    $usuarios[$i] ["contrasena"] =$contrasena;
+  }
+  
+}
+$archivo = fopen("../data/usuarios.json", "w");
+      fwrite($archivo, json_encode($usuarios));
+      fclose($archivo);
+echo 1;
+} 
 }

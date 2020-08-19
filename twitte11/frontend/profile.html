@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/estilos-home.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="shortcut icon" href="img/twitter.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/profile.css">
     <script src="js/iconos.js"></script>
   </head>
 
@@ -26,7 +27,7 @@
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation" style="border: 2px solid;">
           <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="navbar-collapse collapse" id="navbarsExampleDefault">
+      <div  class="navbar-collapse collapse" id="navbarsExampleDefault">   <!--Barra de busqueda-->
         <form class="form-inline my-2 my-lg-0 mr-auto" style="justify-content: space-between;">
           <input class="form-control col-7" type="text" placeholder="Buscar en Twitter" aria-label="Search">
           <button class="btn btn-primary my-2 my-sm-0 col-4" type="submit" style="background-color: #1A91DA !important;">Buscar</button>
@@ -65,11 +66,11 @@
     
     <div class="row" style="margin: 0;margin-top: 5.4em;">
       
-      <!-- BARRA LATERAL DERECHA -->
+      <!-- BARRA LATERAL IZQUIERDA-->
       <aside class="col-12 col-sm-4 col-md-4 col-lg-3 white-text py-3 d-none d-sm-block" style="position: fixed;">
         <ul class="col-12 mx-auto mb-0" id="barraLateralDerecha" style="list-style: none;">
           <li class="mb-3">
-            <a class="link-user text-white align-items-center" tabindex="1" href="#"><i class="fas fa-2x mr-2 fa-home" aria-hidden="true"></i><strong>Inicio</strong></a>
+            <a class="link-user text-white align-items-center" tabindex="1" href="home.html"><i class="fas fa-2x mr-2 fa-home" aria-hidden="true"></i><strong>Inicio</strong></a>
           </li>
           <li class="mb-3">
             <a class="link-user text-white align-items-center" tabindex="1" href="#"><i class="fas fa-2x mr-2 fa-hashtag" aria-hidden="true"></i><strong>Explorar</strong></a>
@@ -87,7 +88,7 @@
             <a class="link-user text-white align-items-center" tabindex="1" href="#"><i class="fas fa-2x mr-2 fa-list-alt" aria-hidden="true"></i><strong>Listas</strong></a>
           </li>
           <li class="mb-3">
-            <a class="link-user text-white align-items-center" tabindex="1" href="profile.html"><i class="fas fa-2x mr-2 fa-user" aria-hidden="true"></i><strong>Perfil</strong></a>
+            <a class="link-user text-white align-items-center" tabindex="1" href="#"><i class="fas fa-2x mr-2 fa-user" aria-hidden="true"></i><strong>Perfil</strong></a>
             <!--a class="link-user text-white" tabindex="1" href="profile.html?idusuario=<?php echo $_SESSION['twitter_codigousuario'];?>"><i class="fas fa-2x mr-2 fa-user" aria-hidden="true"></i><strong>Perfil</strong></a-->
           </li>
           <li class="mb-3">
@@ -98,31 +99,53 @@
           </li>
         </ul>
       </aside>
-      
+
+
+  
       <!-- DIV CENTRAL PANTALLA DE INICIO -->
-      <div id="twits" class="col-12 col-sm-8 col-md-8 col-lg-6 py-3 px-3 mb-4 mb-sm-0 ml-auto mr-lg-auto"></div>
+      <div class="col-12 col-sm-8 col-md-8 col-lg-6 py-3 px-3 mb-4 mb-sm-0 ml-auto mr-lg-auto">
+        <div class="card bg-tweet"> <!--CART-->
+          <div>
+            <img id="profile-image" src="img/goku.jpg" class="card-img-top" alt="...">
+            <div class="pt-2"> 
+              <img src="img/twitter.png" alt="..." style=" max-width: 10rem; position: absolute;top: 3rem;">  
+              <input id="EditarPerfil" class="btn btn-primary  blue-tw-btn" type="button" data-toggle="modal" data-target="#FormEditPerfil" value="Editar Perfil">
+            </div>
+          </div>       
+           <div class="card-body">  
+            <h5 class="card-title" style="color: darkorange;"><span id="profile-nombre">JUAN</span> <span id="profile-apellido">FERNANDO</span></h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+           
+          </div>
+        </div>
+        <br> 
+      <div class="col-12 pt-2"  id="twits"></div>
+    </div>
       
-      <!-- BARRA LATERAL IZQUIERDA -->
+      
+      <!-- BARRA LATERAL DERECHA-->
+    
       <aside class="col-lg-3 d-none d-lg-block py-3" style="position: fixed; right: 0;">
         <div class="tendencias col-12 mx-auto text-white" style="margin-left: 0;margin-right: 0;">
           <p class="mb-3">Tendencias para ti <br>
             Neymar<br>
+            800 mil Tweets 
           </p>
-          <p class="mb-3">Fútbol · Tendencia <br>
-            Neymar <br>
-            2,02 M Tweets.
+          <p class="mb-3">Tendencia en Honduras <br>
+                 Sinager <br>
+                400 mil Tweets
           </p>
-          <p class="mb-3">Fútbol · Tendencia <br>
-            Barca <br>
-            70,4 mil Tweets
+          <p class="mb-3">Tendencia en Honduras <br>
+            Que Dios Nos Ampare ante el Covid 19 <br>
+            200 mil Tweets
           </p>
-          <p class="mb-3">Fútbol ·Tendencia <br>
-            Barca <br>
-            70,4 mil Tweets
+          <p class="mb-3">Tendencia en Honduras <br>
+            Lakers "LeBron" es tendencia por su actuación en el partido de hoy, consiguiendo el triple doble  <br>
+            55 mil Tweets
           </p>
-          <p class="mb-3">Fútbol · Tendencia <br>
-            Icardi <br>
-            117 mil Tweets.
+          <p class="mb-3">Tendencia · Politica <br>
+          Estados Unidos <br>
+          47,1 mil Tweets
           </p>
           <p class="mb-3">Fútbol · Tendencia <br>
             Icardi <br>
@@ -148,7 +171,7 @@
                 <div class="modal-body text-black" style="background-color:#15202B;">
                     <div class="form-row">
                         <div class="col-12 mb-3">
-                            <label for="nombre">Contenido</label>
+                            <label for="textoTwit">Contenido</label>
                             <textarea id="textoTwit" class="control form-control" required="" maxlength="280" placeholder="¿Qué estás pensando?"></textarea>
                             <div class="invalid-feedback">El contenido no debe estar vacío ni exceder los 280 caracteres.</div>
                         </div>
@@ -160,8 +183,85 @@
 
             </div>
         </div>
-    </div>
+        </div>
+        
+      <!--MODAL2-->
+        <div class="modal fade"  id="FormEditPerfil" tabindex="-1" role="dialog" aria-labelledby="formEditarLabel" aria-hidden="true">
+     
+        <div class="modal-dialog">
 
+          <div class="modal-content text-white">
+              <div class="modal-header" style="background-color: #15202B;">
+                  <h5 class="modal-title" style="font-size: x-large;" id="formEditarLabel">Actualizar Perfil</h5>
+                  <img id="logoFormRegistro" src="twitter.png" alt="" style="margin-left: 200px;">
+                  <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+
+              <div class="modal-body text-black" style="background-color:#15202B;">
+                  <div class="form-row">
+                      <div class="col-12 col-sm-6 mb-3">
+                          <label for="nombre">Nombre</label>
+                          <input type="text" id="nombre" class="control form-control" required="" ></input>
+                          <div class="invalid-feedback">Campo Vacio.</div>
+                      </div>
+                      <div class="col-12 col-sm-6 mb-3">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" id="apellido" class="control form-control" required="" ></input>
+                        <div class="invalid-feedback">Campo Vacio.</div>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="col-12 col-sm-6 mb-3">
+                        <label for="contrasena1">Nueva Contraseña</label>
+                        <input type="password" id="contrasena1" class="control form-control" required="" ></input>
+                        <div class="invalid-feedback">Requisitos: más de 8 caracteres incluyendo 0-9, a-z, A-Z, caracteres especiales.</div>
+                    </div>
+                    <div class="col-12 col-sm-6 mb-3">
+                      <label for="contrasena2">Confirmar Nueva Contraseña</label>
+                      <input type="password" id="contrasena2" class="control form-control" required="" ></input>
+                      <div class="invalid-feedback">La Cotraseña no coincide</div>
+                  </div>
+                </div>
+                  <center class="my-3">
+                      <button id="EditProfile" type="button" onclick="editarPerfil()" class="btn btn-primary btn-lg col-sm-10 blue-tw-btn">Actualizar Información</button>
+                  </center>
+              </div>
+
+          </div>
+      </div>
+  </div>
+  
+ <!--MODAL3-->
+  <div class="modal fade"  id="EditTweet" tabindex="-1" role="dialog" aria-labelledby="editTweetLabel" aria-hidden="true">
+    <div class="modal-dialog">
+
+        <div class="modal-content text-white">
+            <div class="modal-header" style="background-color: #15202B;">
+                <h5 class="modal-title" style="font-size: x-large;" id="editTweetLabel">Edita el contenido del Tweet</h5>
+                <img id="logoFormRegistro" src="twitter.png" alt="" style="margin-left: 200px;">
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body text-black" style="background-color:#15202B;">
+                <div class="form-row">
+                    <div class="col-12 mb-3">
+                        <label for="textoTwitEditar">Nuevo Contenido</label>
+                        <textarea id="textoTwitEditar" class="control form-control" required="" maxlength="280" placeholder="¿Qué estás pensando?"></textarea>
+                        <div class="invalid-feedback">El contenido no debe estar vacío ni exceder los 280 caracteres.</div>
+                    </div>
+                </div>
+                <center id="edit" class="my-3">
+                    
+                </center>
+            </div>
+
+        </div>
+    </div>
+    </div>
     <div class="col-12 py-3 d-block d-sm-none d-md-none d-lg-none d-xl-none bg-dark fixed-bottom">
         <input id="nuevoTweet" class="btn btn-primary btn-lg col-12 blue-tw-btn" type="button" data-toggle="modal" data-target="#formTweet" value="Twitear">
     </div>
@@ -173,6 +273,8 @@
     <script src="js/axios.min.js"></script>
     <script src="js/controlador-tweets.js"></script>
     <script src="js/funciones-validacion.js"></script>
+    <script src="js/controlador-usuarios.js"></script>
+  
     
     
   
