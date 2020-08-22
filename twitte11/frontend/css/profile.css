@@ -1,5 +1,12 @@
 #profile-image{
-    height: 5rem;
+    height: 12rem;
     width: 100%;
     
 }
+#EditarPerfil {
+    color: #1A91DA;
+    background-color: #162D40;
+    margin-left: 80%;
+    
+}
+

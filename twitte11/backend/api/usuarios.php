@@ -11,13 +11,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
         $usuario = new Usuario($_POST["nombre"], $_POST["apellido"], $_POST["correo"], $_POST["fechaNacimiento"], $_POST["contrasena"]);
         $fin = $usuario->guardarUsuario(); 
         if ($fin["resultado"] != 0) { // El usuario se registro, datos validos
-            // // ◘◘◘ VARIABLES DE SESION
-            // $_SESSION["twitter_codigousuario"] = $fin["codigoUsuario"]; // EXTREAER CODIGO
-            // $_SESSION["twitter_nombre"] = $_POST["nombre"];
-            // $_SESSION["twitter_apellido"] = $_POST["apellido"];
-            // $_SESSION["twitter_correo"] = $_POST["correo"];
-            
-            // $_SESSION["twitter_tipousuario"] = $_POST["tipoUsuario"];
+           
             echo $fin["resultado"];
         }
         else {
@@ -30,12 +24,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
         }
         else if ( isset($_GET["correo"]) || isset($_GET["contrasena"]) )  {
             Usuario::validarInicioSesion($_GET['correo'], $_GET["contrasena"]); //llamo al metodo validadinicioSesion
-            // ◘◘◘ VARIABLES DE SESION
-            // $_SESSION["twitter_codigousuario"] = $fin["codigoUsuario"]; // EXTREAER CODIGO
-            // $_SESSION["twitter_nombre"] = $fin["nombre"]; // EXTRAER NOMBRE
-            // $_SESSION["twitter_apellido"] = $fin["apellido"]; // EXTRAER APELLIDO
-            // $_SESSION["twitter_correo"] = $_POST["correo"];
-            // $_SESSION["twitter_tipousuario"] = $fin["tipoUsuario"]; // EXTRAER TIPO DE USUARIO
+           
         }
         else {
             Usuario::obtenerUsuarios();

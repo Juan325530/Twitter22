@@ -27,7 +27,7 @@ function addInvalid(id) {
 //Validar que dos contraseñas coincidan entre si. En especial para un formulario de registro.
 function confirmarContrasenas(contra1,contra2){
     let validarC1 = validarRegex(contra1, "password");
-    let validarC2 = validarRegex(contra2, "password"); //confirmar contra
+    let validarC2 = validarRegex(contra2, "password"); //Confirmar contraseña 
     if ( validarC1 && validarC2 ) {
         if (document.getElementById(contra1).value == document.getElementById(contra2).value) {
             addValid(contra1);
@@ -36,7 +36,7 @@ function confirmarContrasenas(contra1,contra2){
         } else {
             addInvalid(contra1);
             addInvalid(contra2);
-            alert("Las contraseñas no coinciden.");
+            alert("Las contraseñas no coinciden.");  
             return false;
         }
     } else {

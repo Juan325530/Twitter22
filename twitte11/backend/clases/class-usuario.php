@@ -181,7 +181,7 @@ class Usuario
         $respuesta = 1; // Si las credenciales de entrada son correctas se retorna 1
       }
     }
-    echo $respuesta; // ◘◘◘ Retornar codigoUsuario y tipoUsuario
+    echo $respuesta; //Retornar codigoUsuario y tipoUsuario
   }
 
 

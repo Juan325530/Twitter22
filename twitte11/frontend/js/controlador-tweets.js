@@ -144,3 +144,44 @@ function compartirTweet(texto, idTwit) {
      $("#EditTweet").modal("show");
 
 }
+
+
+//function eleminarTweet(texto, idTwit) {
+//    // "codigoTwit"         // clase PHP generar
+//    // "codigoUsuario"      // api PHP session
+//    // "contenidoTwit"      // twit publicado ***
+//    // "imagen"             // ""             ***
+//    // "cantidadReTwits"    // clase PHP++
+//    // "codigoTwitOriginal" // twit publicado ***
+//    let twitParaCompartir ={
+//        contenidoTwit: texto,
+//        imagen: "",
+//        cantidadReTwits: 0,
+//        codigoTwitOriginal: idTwit
+//    };
+//    console.log('Twit a compartir', twitParaCompartir);
+//    axios({
+//        method: '',
+//        url: urlTweets,
+//        responseType:'json',
+//        data:twitParaCompartir
+//
+//    }).then(res=>{
+//        console.log(res); // Se devuelve en consola todos los tweets incluyendo el nuevo, abajo se imprimen en html con la funcion generarTwits()
+//        document.getElementById("twits").innerHTML = "";
+//        generarTwits();
+//
+//    }).catch(error=>{
+//        console.error(error);
+//    });
+//}
+//
+// function modaleditartweet(idtweetEditar) {
+//     $("#edit").html(`<button id="postTwit" type="button" onclick="AcualizarTwit(${idtweetEditar})" class="btn btn-primary btn-lg col-sm-10 blue-tw-btn">Actualizar Tweet</button>`)
+//     $("#EditTweet").modal("show");
+//
+//}
+//
+//
+
+
